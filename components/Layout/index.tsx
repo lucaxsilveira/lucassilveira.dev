@@ -11,7 +11,7 @@ const Layout: React.FC = ({ children }: Props): JSX.Element => {
   return (
     <>
       <Meta />
-      <body>
+      <body className="dark:bg-dark-300">
         <Header></Header>
         <Container>{children}</Container>
         <Footer></Footer>

@@ -6,7 +6,7 @@ const Home = (): JSX.Element => {
       <div className="container h-screen">
         <div className="flex flex-col justify-center h-full">
           <p className="mb-0 text-primary mono">Oi, me chamo</p>
-          <h1>Lucas da Silveira</h1>
+          <h1 className="dark:text-white">Lucas da Silveira</h1>
           <h3 className="subtitle text-gray-400">
             Programador full-stack, apaixonado por front-end.
           </h3>
