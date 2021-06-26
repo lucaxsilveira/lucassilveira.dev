@@ -1,8 +1,8 @@
 @import '~tailwindcss/base';
 @import '~tailwindcss/components';
 @import '~tailwindcss/utilities';
-
+@import 'typography';
 
 body {
-    font-family: 'Poppins', 'Roboto', sans-serif;
+  font-family: 'Poppins', 'Roboto', sans-serif;
 }

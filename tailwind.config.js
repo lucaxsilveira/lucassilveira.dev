@@ -9,6 +9,7 @@ module.exports = {
       blue: colors.lightBlue,
       red: colors.rose,
       pink: colors.fuchsia,
+      primary: '#0F32FF',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
@@ -31,6 +32,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     // require('@tailwindcss/forms'),
     // require('@tailwindcss/aspect-ratio'),
     // require('@tailwindcss/typography'),

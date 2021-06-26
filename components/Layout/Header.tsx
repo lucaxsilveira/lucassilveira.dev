@@ -1,15 +1,17 @@
+import Image from 'next/image'
+
 const Header = (): JSX.Element => {
   return (
     <div className="relative bg-white border-b-2 border-gray-100">
       <div className="mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <span className="sr-only">Workflow</span>
-            <img
-              className="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt=""
-            />
+            <div className="flex items-end">
+              <Image src="/images/logo.png" width={40} height={40} priority />
+              <span className="ml-4 mono">
+                Lucas Silveira<span className="text-primary text-xl">.</span>
+              </span>
+            </div>
           </div>
           <nav className="hidden md:flex space-x-7 align-middle justify-center">
             <span className="flex items-center">About</span>
