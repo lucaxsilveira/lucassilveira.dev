@@ -11,9 +11,13 @@ module.exports = {
       pink: colors.fuchsia,
       primary: '#0F32FF',
       white: '#FFFFFF',
-      'dark-100': '#1F1F1F',
-      'dark-200': '#202020',
-      'dark-300': '#131313',
+      dark: {
+        100: '#1F1F1F',
+        200: '#202020',
+        300: '#131313',
+        background: '#131313',
+        text: colors.gray[300],
+      },
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
