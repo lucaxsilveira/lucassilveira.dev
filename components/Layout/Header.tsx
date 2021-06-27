@@ -2,6 +2,10 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import { MoonIcon, SunIcon } from '@heroicons/react/outline'
+import { useCallback } from 'react'
+
+import sound from '../../public/sounds/bulb.mp3'
+import useSound from 'use-sound'
 
 const Header = (): JSX.Element => {
   const themeKey = '@lucassilveira:theme'
@@ -11,6 +15,8 @@ const Header = (): JSX.Element => {
   )
   const [open, setOpen] = useState(false)
   const [firstLoad, setFirstLoad] = useState(true)
+
+  const [play] = useSound(sound)
 
   useEffect(() => {
     if (firstLoad) {
@@ -26,6 +32,14 @@ const Header = (): JSX.Element => {
       localStorage.setItem(themeKey, 'light')
     }
   }, [darkMode])
+
+  const handleDarkMode = useCallback(
+    (dark) => {
+      setDarkMode(dark)
+      play()
+    },
+    [play],
+  )
 
   return (
     <div className="relative bg-white border-b-2 border-gray-100 dark:bg-dark-background dark:border-dark-100">
@@ -76,13 +90,13 @@ const Header = (): JSX.Element => {
             {!darkMode && (
               <MoonIcon
                 className="cursor-pointer"
-                onClick={() => setDarkMode(true)}
+                onClick={() => handleDarkMode(true)}
               />
             )}
             {darkMode && (
               <SunIcon
                 className="cursor-pointer"
-                onClick={() => setDarkMode(false)}
+                onClick={() => handleDarkMode(false)}
               />
             )}
           </div>
