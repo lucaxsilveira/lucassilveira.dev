@@ -56,7 +56,7 @@ const Header = (): JSX.Element => {
           <div className="-mr-10 -my-2 md:hidden">
             <button
               type="button"
-              className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="dark:bg-dark-background bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               aria-expanded="false"
               onClick={() => setOpen(true)}
             >
@@ -86,16 +86,16 @@ const Header = (): JSX.Element => {
               Resume
             </button>
           </nav>
-          <div className="span text-xs flex w-6 text-gray-400">
+          <div className="span text-xs flex w-6 h-6 text-gray-400">
             {!darkMode && (
               <MoonIcon
-                className="cursor-pointer"
+                className="cursor-pointer w-5 h-5"
                 onClick={() => handleDarkMode(true)}
               />
             )}
             {darkMode && (
               <SunIcon
-                className="cursor-pointer"
+                className="cursor-pointer w-5 h-5"
                 onClick={() => handleDarkMode(false)}
               />
             )}
@@ -108,13 +108,13 @@ const Header = (): JSX.Element => {
           open ? '' : 'hidden'
         }`}
       >
-        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+        <div className="dark:bg-dark-background rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
           <div className="pt-5 pb-6 px-5">
             <div className="flex items-center justify-between">
               <div className="absolute right-2 top-4 mr-2">
                 <button
                   type="button"
-                  className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  className="dark:bg-dark-background bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                   onClick={() => setOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
