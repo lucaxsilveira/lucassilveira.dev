@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
+import Image from 'next/image'
+import HeadingTitle from '../HeadingTitle'
 import { MoonIcon, SunIcon } from '@heroicons/react/outline'
-import { useCallback } from 'react'
 
 import sound from '../../public/sounds/bulb.mp3'
 import useSound from 'use-sound'
@@ -48,8 +48,8 @@ const Header = (): JSX.Element => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <div className="flex items-end">
               <Image src="/images/logo.png" width={40} height={40} priority />
-              <span className="ml-4 mono dark:text-white">
-                Lucas Silveira<span className="text-primary text-xl">.</span>
+              <span className="ml-4">
+                <HeadingTitle title="Lucas Silveira" mono></HeadingTitle>
               </span>
             </div>
           </div>
@@ -78,7 +78,7 @@ const Header = (): JSX.Element => {
               </svg>
             </button>
           </div>
-          <nav className="dark:text-dark-text text-gray-600 hidden md:flex space-x-7 align-middle justify-center">
+          <nav className="hidden md:flex space-x-7 align-middle justify-center cursor-pointer">
             <span className="flex items-center">About</span>
             <span className="flex items-center">Projects</span>
             <span className="flex items-center">Find me</span>

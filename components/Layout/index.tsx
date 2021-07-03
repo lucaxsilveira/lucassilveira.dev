@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Container from './Container'
 import Header from './Header'
-import Footer from './Footer'
+// import Footer from './Footer'
 import Meta from './Meta'
 
 type Props = {
@@ -27,7 +27,7 @@ const Layout: React.FC = ({ children }: Props): JSX.Element => {
       <body className="dark:bg-dark-background">
         <Header></Header>
         <Container>{children}</Container>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </body>
     </>
   ) : null
