@@ -1,66 +1,66 @@
 #about {
-    .content {
-        grid-template-columns: 3fr 2fr;
+  .content {
+    grid-template-columns: 3fr 2fr;
 
-        p {
-            @apply mb-4;
-        }
-
-        .image-wrapper {
-            position: relative;
-            max-width: 320px;
-
-            .image {
-                transition: $transition;
-                display: block;
-                position: relative;
-                width: 100%;
-                
-                @apply rounded-md;
-
-                &:after,
-                &:before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 320px;
-                    z-index: 1;
-                    transition: $transition;
-
-                    @apply rounded-md;
-                }
-
-                &:before {
-                    top: 0px;
-                    left: 0px;
-                    mix-blend-mode: screen; 
-                    opacity: 0.4;
-
-                    @apply bg-primary;
-                }
-
-                &:after {
-                    border: 4px solid;
-                    top: 25px;
-                    left: 25px;
-                    z-index: -1;
-
-                    @apply bg-primary border-primary;
-                }
-
-                &:hover {
-                    &:before {
-                        background-color: transparent;
-                    }
-
-                    &:after {
-                        top: 18px;
-                        left: 18px;
-                        opacity: 0.8;
-                    }
-                }
-            }
-        }
+    p {
+      @apply mb-4;
     }
+
+    .image-wrapper {
+      position: relative;
+      max-width: 320px;
+
+      .image {
+        transition: $transition;
+        display: block;
+        position: relative;
+        width: 100%;
+
+        @apply rounded-md;
+
+        &:after,
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 320px;
+          z-index: 1;
+          transition: $transition;
+
+          @apply rounded-md;
+        }
+
+        &:before {
+          top: 0px;
+          left: 0px;
+          mix-blend-mode: screen;
+          opacity: 0.4;
+
+          @apply bg-primary;
+        }
+
+        &:after {
+          border: 4px solid;
+          top: 25px;
+          left: 25px;
+          z-index: -1;
+
+          @apply bg-primary border-primary;
+        }
+
+        &:hover {
+          &:before {
+            background-color: transparent;
+          }
+
+          &:after {
+            top: 18px;
+            left: 18px;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
 }

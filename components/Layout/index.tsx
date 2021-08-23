@@ -9,6 +9,7 @@ type Props = {
 }
 const Layout: React.FC = ({ children }: Props): JSX.Element => {
   const [loaded, setLoaded] = useState(false)
+
   useEffect(() => {
     if (
       localStorage['@lucassilveira:theme'] === 'dark' ||

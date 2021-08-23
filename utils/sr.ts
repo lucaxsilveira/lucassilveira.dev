@@ -1,6 +1,14 @@
-import ScrollReveal from 'scrollreveal'
+// import ScrollReveal from 'scrollreveal'
 
-const isSSR = typeof window === 'undefined'
-const sr = isSSR ? null : ScrollReveal()
+import { srConfig } from '../configs'
 
-export default sr
+const handleScrollReveal = async (container) => {
+  if (typeof window !== 'undefined') {
+    const { default: ScrollReveal } = await import('scrollreveal')
+    if (ScrollReveal) {
+      ScrollReveal().reveal(container.current, srConfig())
+    }
+  }
+}
+
+export default handleScrollReveal
