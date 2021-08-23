@@ -23,14 +23,12 @@ const Layout: React.FC = ({ children }: Props): JSX.Element => {
   }, [])
 
   return loaded ? (
-    <>
+    <div className="dark:bg-dark-background">
       <Meta />
-      <body className="dark:bg-dark-background">
-        <Header></Header>
-        <Container>{children}</Container>
-        {/* <Footer></Footer> */}
-      </body>
-    </>
+      <Header></Header>
+      <Container>{children}</Container>
+      {/* <Footer></Footer> */}
+    </div>
   ) : null
 }
 

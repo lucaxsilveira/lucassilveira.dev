@@ -1,0 +1,21 @@
+#about {
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(120px, 200px));
+        margin-top: theme('spacing.4');
+        gap: 0 20px;
+
+        li {
+            @apply text-sm;
+            position: relative;
+            padding-left: 20px;
+
+            &:before {
+                position: absolute;
+                left: 0px;
+                content: "●";
+                @apply text-primary;
+            }
+        }
+    }
+}

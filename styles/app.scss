@@ -7,7 +7,13 @@
 @import 'typography';
 @import 'transitions';
 @import 'home';
+@import 'about';
 
 body {
   font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+
+html.dark {
+  @apply bg-dark-background;
 }
