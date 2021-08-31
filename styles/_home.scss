@@ -2,6 +2,10 @@
   .content {
     grid-template-columns: 3fr 2fr;
 
+    @media screen and (max-width: 720px){
+      grid-template-columns: 1fr;
+    }
+
     p {
       @apply mb-4;
     }

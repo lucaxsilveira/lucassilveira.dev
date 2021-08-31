@@ -9,10 +9,14 @@
 @import 'home';
 @import 'about';
 
+
+html,body {
+  width: 100%;
+}
+
 body {
   font-family: 'Poppins', 'Roboto', sans-serif;
 }
-
 
 html.dark {
   @apply bg-dark-background;
