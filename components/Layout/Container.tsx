@@ -3,7 +3,7 @@ type Props = {
 }
 
 const Container = ({ children }: Props): JSX.Element => {
-  return <div className="container mx-auto px-24">{children}</div>
+  return <div className="container mx-auto md:px-36 px-10">{children}</div>
 }
 
 export default Container
