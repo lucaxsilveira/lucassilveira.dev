@@ -16,19 +16,15 @@ const Hero: React.FC = () => {
   const items = [intro, name, code]
 
   return (
-    <div className="block">
-      <div className="flex flex-col justify-center h-screen">
-        <TransitionGroup component={null}>
-          {isMounted &&
-            items.map((item, index) => (
-              <CSSTransition key={index} classNames="fade-up" timeout={500}>
-                <div style={{ transitionDelay: `${index + 1}00ms` }}>
-                  {item}
-                </div>
-              </CSSTransition>
-            ))}
-        </TransitionGroup>
-      </div>
+    <div className="flex flex-col justify-center h-screen">
+      <TransitionGroup component={null}>
+        {isMounted &&
+          items.map((item, index) => (
+            <CSSTransition key={index} classNames="fade-up" timeout={500}>
+              <div style={{ transitionDelay: `${index + 1}00ms` }}>{item}</div>
+            </CSSTransition>
+          ))}
+      </TransitionGroup>
     </div>
   )
 }

@@ -42,7 +42,7 @@ const Header = (): JSX.Element => {
   )
 
   return (
-    <div className="relative bg-white border-b-2 border-gray-100 dark:bg-dark-background dark:border-dark-100">
+    <div className="fixed w-full bg-white border-b-2 border-gray-100 dark:bg-dark-background dark:border-dark-100">
       <div className="mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -82,9 +82,14 @@ const Header = (): JSX.Element => {
             <span className="flex items-center">About</span>
             <span className="flex items-center">Projects</span>
             <span className="flex items-center">Find me</span>
-            <button className="ml-10 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium dark:text-gray-300 bg-indigo-600 hover:bg-indigo-700 dark:border-gray-300">
-              Resume
-            </button>
+            <a
+              href="https://docs.google.com/document/d/19wbvXYfZFqYgQ6dmulUhON3B-fUcNbfizFAIeUvl588/edit"
+              target="blank"
+            >
+              <button className="ml-10 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium dark:text-gray-300 bg-indigo-600 hover:bg-indigo-700 dark:border-gray-300">
+                Resume
+              </button>
+            </a>
           </nav>
           <div className="span text-xs flex w-6 h-6 text-gray-400">
             {!darkMode && (

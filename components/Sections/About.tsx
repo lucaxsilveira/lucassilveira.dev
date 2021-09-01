@@ -48,9 +48,9 @@ const Home = (): JSX.Element => {
             <ul className="skills">
               <li>React.js</li>
               <li>Vue.js</li>
-              <li>PHP (Laravel)</li>
-              <li>Mysql</li>
               <li>Javascript(ES6+)</li>
+              <li>PHP (Laravel)</li>
+              <li>MYSQL</li>
               <li>Sass</li>
             </ul>
           </div>
