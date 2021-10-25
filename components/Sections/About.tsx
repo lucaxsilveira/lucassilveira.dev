@@ -3,9 +3,12 @@ import Image from 'next/image'
 
 import HeadingTitle from '../HeadingTitle'
 import handleScrollReveal from '../../utils/sr'
+import { useUserContext } from '../../hooks/user'
 
-const About = ({ bio = '' }): JSX.Element => {
+const About = (): JSX.Element => {
   const container = useRef<HTMLElement>(null)
+
+  const { bio } = useUserContext()
 
   useEffect(() => {
     handleScrollReveal(container)
