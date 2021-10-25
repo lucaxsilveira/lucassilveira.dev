@@ -4,12 +4,12 @@ import Image from 'next/image'
 import HeadingTitle from '../HeadingTitle'
 import handleScrollReveal from '../../utils/sr'
 
-const Home = (): JSX.Element => {
+const About = ({ bio = '' }): JSX.Element => {
   const container = useRef<HTMLElement>(null)
 
   useEffect(() => {
     handleScrollReveal(container)
-  }, [container])
+  }, [bio, container])
 
   return (
     <section ref={container} id="about" className="block pb-20">
@@ -71,4 +71,4 @@ const Home = (): JSX.Element => {
   )
 }
 
-export default Home
+export default About
