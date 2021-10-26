@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import { RichText } from 'prismic-reactjs'
 
 import HeadingTitle from '../HeadingTitle'
 import handleScrollReveal from '../../utils/sr'
-import { useUserContext } from '../../hooks/user'
+import { Tech, useUserContext } from '../../hooks/user'
 
 const About = (): JSX.Element => {
   const container = useRef<HTMLElement>(null)
@@ -25,36 +26,15 @@ const About = (): JSX.Element => {
       <div className="flex items-center">
         <div className="content grid gap-10">
           <div>
-            <p>
-              I started my life in this environment when I was 18 years old. In
-              an advertising agency, I was responsible for creating graphic
-              materials for websites and social networks. Over time, I started
-              to enjoy programming more and more to see and deal with it every
-              day. That&quot;s when I decided to pursue a career in the area.
-            </p>
-
-            <p>
-              A year later, at 19, I took the first steps towards the future I
-              imagined, I left my job at the agency and started developing
-              projects that would serve to make the world a little simpler.
-            </p>
-
-            <p>
-              In short: I like challenges, &quot;impossible&quot; things to
-              solve. I believe in the power of well-written code and an awesome
-              interface solve most problems and guide people to the right path.
-            </p>
+            {RichText.render(bio.text)}
 
             <p>
               Here are some technologies I&quot;ve been working with recently:
             </p>
             <ul className="skills">
-              <li>React.js</li>
-              <li>Vue.js</li>
-              <li>Javascript(ES6+)</li>
-              <li>PHP (Laravel)</li>
-              <li>MYSQL</li>
-              <li>Sass</li>
+              {bio.techs.map(({ tech }: Tech) => (
+                <li key={RichText.asText(tech)}>{RichText.render(tech)}</li>
+              ))}
             </ul>
           </div>
           <div className="image-wrapper ">

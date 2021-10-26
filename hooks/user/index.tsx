@@ -1,8 +1,13 @@
 import React, { createContext, useContext, useState } from 'react'
+import { RichTextBlock } from 'prismic-reactjs'
+
+export type Tech = {
+  tech: RichTextBlock[]
+}
 
 type UserBioType = {
-  text: string
-  techs?: [string]
+  text: RichTextBlock[]
+  techs?: Tech[]
 }
 
 type PropsUserContext = {
@@ -12,7 +17,7 @@ type PropsUserContext = {
 
 const DEFAULT_STATE = {
   bio: {
-    text: '',
+    text: [] as RichTextBlock[],
     techs: null,
   },
   setBio: () => ({}),
