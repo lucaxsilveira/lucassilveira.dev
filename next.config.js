@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  swcMinify: true,
   trailingSlash: false,
   webpack: (config) => {
     config.module.rules.push({
