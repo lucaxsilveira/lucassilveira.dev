@@ -41,10 +41,11 @@ const About = (): JSX.Element => {
             <div className="image">
               <Image
                 className="rounded-md"
-                src="/images/me.jpg"
                 width="320"
                 height="320"
                 priority
+                alt={bio?.photo?.alt}
+                src={bio?.photo?.url}
               />
             </div>
           </div>

@@ -3,6 +3,9 @@ const path = require('path')
 module.exports = {
   swcMinify: true,
   trailingSlash: false,
+  images: {
+    domains: ['images.prismic.io'],
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(mp3)$/,

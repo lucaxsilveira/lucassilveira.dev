@@ -8,6 +8,7 @@ export type Tech = {
 type UserBioType = {
   text: RichTextBlock[]
   techs?: Tech[]
+  photo: RichTextBlock
 }
 
 type PropsUserContext = {
@@ -19,6 +20,7 @@ const DEFAULT_STATE = {
   bio: {
     text: [] as RichTextBlock[],
     techs: null,
+    photo: {} as RichTextBlock,
   },
   setBio: () => ({}),
 }
