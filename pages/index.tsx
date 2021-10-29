@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
-import Layout from '../components/Layout'
-import Hero from '../components/Sections/Hero'
-import About from '../components/Sections/About'
-import { Client, manageLocal } from '../utils/prismicHelpers'
-import { useUserContext } from '../hooks/user'
+import Layout from 'components/Layout'
+import Hero from 'components/Sections/Hero'
+import About from 'components/Sections/About'
+import Projects from 'components/Sections/Projects'
+import { Client, manageLocal } from 'utils/prismicHelpers'
+import { useUserContext } from 'hooks/user'
 
 const Home = ({ bio }): JSX.Element => {
   const { setBio } = useUserContext()
@@ -16,6 +17,7 @@ const Home = ({ bio }): JSX.Element => {
     <Layout>
       <Hero />
       <About />
+      <Projects />
     </Layout>
   )
 }

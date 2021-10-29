@@ -28,9 +28,6 @@ const About = (): JSX.Element => {
           <div>
             {RichText.render(bio.text)}
 
-            <p>
-              Here are some technologies I&quot;ve been working with recently:
-            </p>
             <ul className="skills">
               {bio.techs.map(({ tech }: Tech) => (
                 <li key={RichText.asText(tech)}>{RichText.render(tech)}</li>
